@@ -41,9 +41,9 @@ const int totalMusicas = 5;
 int musicaSelecionada = 0;
 
 const char* nomes[totalMusicas] = {
-  "Musica 1",
-  "Musica 2",
-  "Musica 3",
+  "Harry Potter",
+  "Star Wars",
+  "Pacman",
   "Musica 4",
   "Musica 5"
 };
