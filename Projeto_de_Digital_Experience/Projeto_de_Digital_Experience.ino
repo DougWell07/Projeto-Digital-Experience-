@@ -1,26 +1,11 @@
 /*
 Título: Projeto de Digital Experience
-Autor: Douglas Wellington Pinto e Lucas Bartoletti Sanches 
+Autor: Douglas Wellington Pinto e Lucas Bartoletti Sanches
 Data: 03/11/2026
 Versão: 1.0
-Descrição de funcionamento do programa: Tem que colocar as funções das músicas, colocar os nomes das músicas no código e fazer os teste primeiro no Tinkercad e depois na vida real
-*/
-
-// ===========    Inclusão de Bibliotecas    =========== //
-
-
-
-// ===========    Mapeamento de Hardware     =========== //
-
-//  Botões //
-const int b1 = 8;
-const int b2 = 9;
-const int b3 = 10;/*
-Título: Projeto de Digital Experience
-Autor: Douglas Wellington Pinto
-Data: 03/11/2026
-Versão: 1.0
-Descrição de funcionamento do programa: 
+Descrição de funcionamento do programa:
+  Reprodutor de músicas com Arduino UNO, LCD I2C 16x2, 4 botões,
+  2 LEDs e buzzer. (descrever melhor ao final do projeto)
 */
 
 // ===========    Inclusão de Bibliotecas    =========== //
@@ -51,7 +36,7 @@ const int Tocando = 1;
 const int Pausado = 2;
 int estado = Menu;
 
-// Músicas // 
+// Músicas //
 const int totalMusicas = 5;
 int musicaSelecionada = 0;
 
@@ -74,7 +59,6 @@ int ultimoB1 = HIGH;
 int ultimoB2 = HIGH;
 int ultimoB3 = HIGH;
 int ultimoB4 = HIGH;
-const unsigned long tempoDebounce = 50;
 
 // ===========      Criação de Objetos       =========== //
 LiquidCrystal_I2C lcd(0x27, 16, 2);
@@ -102,7 +86,7 @@ void setup()
   mudaEstado(Menu);
 }
 
-// ===========         Loop Infinito       =========== //
+// ===========         Loop Infinito         =========== //
 
 void loop()
 {
@@ -112,7 +96,7 @@ void loop()
   estadob3 = digitalRead(b3);
   estadob4 = digitalRead(b4);
 
-  // 2- Menu
+  // 2- Menu //
   if (estado == Menu)
   {
     // UP //
@@ -127,7 +111,7 @@ void loop()
       }
     }
 
-    // Down //
+    // DOWN //
     if (estadob2 == LOW && ultimoB2 == HIGH)
     {
       if (musicaSelecionada < totalMusicas - 1)
@@ -146,10 +130,10 @@ void loop()
     }
   }
 
-  // 3- Estado tocando //
+  // 3- Estado Tocando //
   else if (estado == Tocando)
   {
-    // PLAY: pausa
+    // PLAY: pausa //
     if (estadob3 == LOW && ultimoB3 == HIGH)
     {
       mudaEstado(Pausado);
@@ -162,7 +146,7 @@ void loop()
     }
   }
 
-  // 4- Estado Pausado
+  // 4- Estado Pausado //
   else if (estado == Pausado)
   {
     // PLAY: volta a tocar //
@@ -213,7 +197,7 @@ void atualizaMenu()
   }
 }
 
-void mudaEstado (int novoEstado)
+void mudaEstado(int novoEstado)
 {
   estado = novoEstado;
 
@@ -239,7 +223,7 @@ void mudaEstado (int novoEstado)
   {
     atualizaMenu();
   }
-  else 
+  else
   {
     atualizaTelaReproducao();
   }
@@ -255,94 +239,16 @@ void atualizaTelaReproducao()
 {
   lcd.clear();
 
-  lcd.setCursor(0,0);
+  lcd.setCursor(0, 0);
   if (estado == Tocando)
   {
     lcd.print("Reproduzindo");
   }
-  else 
+  else
   {
     lcd.print("Pausado");
   }
 
-  lcd.setCursor(0,1);
+  lcd.setCursor(0, 1);
   lcd.print(nomes[musicaSelecionada]);
-}
-
-const int b4 = 11;
-
-// LED's //
-const int led1 = 7;
-const int led2 = 6;
-
-// Buzzer //
-const int buzzer =  12;  
-
-// ===========  Criação de variáveis globais =========== //
-const int totalMusicas = 5;
-const int 
-
-
-// Leitura atual e anterior dos botões do menu //
-int estadob1 = HIGH;
-int estadob2 = HIGH;
-int ultimoB1 = HIGH;
-int ultimoB2 = HIGH;
-
-
-// ===========      Criação de Objetos       =========== //
-
-
-
-
-// ===========      Configurações iniciais   =========== //
-
-void setup() 
-{
-  
-  pinMode(8, INPUT_PULLUP);
-  pinMode(9, INPUT_PULLUP);
-  pinMode(10, INPUT_PULLUP);
-  pinMode(11, INPUT_PULLUP);
-  
-  pinMode(7, OUTPUT);
-  pinMode(6, OUTPUT);
-
-  pinMode(12, OUTPUT);
-  
-  Serial.begin(9600);
-  Serial.print("================= COMUNICACAO ESTABELECIDA =================");
-}
-
-
-// ===========         Loop Infinito       =========== //
-
-void loop() 
-{
-  estadob1 = digitalRead(b1);
-  if (estadob1 == LOW) && (ultimoB1 == HIGH)
-  {
-    if (musicaSelecionada > 0)
-    {
-      musicaSelecionada--; 
-      Serial.print("Selecionada: ");
-      Serial.println(musicaSelecionada);
-    }
-  }
-
-  ultimoB1 = estadoB1;
-
-  estadob2 = digitalRead(b2);
-  if (estadob2 == HIGH) && (ultimoB2 == LOW)
-  {
-    if (musicaSelecionada < totalMusicas - 1)
-    {
-      musicaSelecionada++;
-      Serial.print("Selecionada: ");
-      Serial.print(musicaSelecionada);
-    }
-  }
-
-  ultimoB2 = estadob2;
-
 }
