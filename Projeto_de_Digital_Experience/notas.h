@@ -1,0 +1,33 @@
+#pragma once
+
+const int REST     = 0;
+const int NOTE_G3  = 196;
+const int NOTE_C4  = 262;
+const int NOTE_D4  = 294;
+const int NOTE_E4  = 330;
+const int NOTE_F4  = 349;
+const int NOTE_G4  = 392;
+const int NOTE_A4  = 440;
+const int NOTE_B4  = 494;
+const int NOTE_C5  = 523;
+const int NOTE_D5  = 587;
+const int NOTE_DS5 = 622;
+const int NOTE_E5  = 659;
+const int NOTE_F5  = 698;
+const int NOTE_FS5 = 740;
+const int NOTE_G5  = 784;
+const int NOTE_GS5 = 831;
+const int NOTE_A5  = 880;
+const int NOTE_B5  = 988;
+const int NOTE_C6  = 1047;
+const int NOTE_E6  = 1319;
+const int NOTE_G6  = 1568;
+const int NOTE_CS4 = 277;
+const int NOTE_GS4 = 415;
+const int NOTE_AS4 = 466;
+const int NOTE_CS5 = 554;
+const int NOTE_CS6 = 1109;
+const int NOTE_DS6 = 1245;
+const int NOTE_F6  = 1397;
+const int NOTE_AS5 = 932;
+const int NOTE_GS5 = 831;
