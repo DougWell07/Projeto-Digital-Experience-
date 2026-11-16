@@ -3,9 +3,9 @@
 #include "notas.h"
 
 // Take on me - Robson Couto, 2019
-//https://github.com/robsoncouto/arduino-songs                                            
+// https://github.com/robsoncouto/arduino-songs                                            
 // Partitura https://musescore.com/user/27103612/scores/4834399
-//Formato: nota, duração (4 = semínima, 8 = colcheia, 16 = semicolcheia, negativo = semínima pontuada)
+// Formato: nota, duração (4 = semínima, 8 = colcheia, 16 = semicolcheia, negativo = semínima pontuada)
 
 
 const int tempo1 = 140;
