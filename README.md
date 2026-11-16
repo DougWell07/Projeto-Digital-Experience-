@@ -27,5 +27,21 @@ Desenvolver um reprodutor de músicas simples, semelhante a um MP3 player básic
 | LED vermelho | 1 | Indica música pausada |
 | Resistor [valor, ex: 220 ohms] | 2 | Proteção dos LED's |
 | Buzzer | 1 | Reprodução do som |
-| Protoboard e jumpers | - | Conexões | <!-- colocar dps do trabalho concluído o valor real de jumpers utilizados -->
+| Protoboard e jumpers | 1 / 12 | Conexões | 
 
+### 2.2. Ligações (pinagem)
+
+| Componente | Pino do Arduino |
+|---|---|
+| Botão UP | 8 |
+| Botão DOWN | 9 |
+| Botão PLAY/PAUSE | 10 |
+| Botão STOP | 11 |
+| LED verde | 7 |
+| LED vermelho | 6 |
+| Buzzer | 12 |
+| LCD (SDA / SCL) | A4 / A5 |
+
+Os botões usam o resistor interno do Arduino ('INPUT_PULLUP'): um terminal vai ao pino e o outro ao GND, e o botão pressionado lê 'LOW'.
+
+![Montagem do projeto](Montagem%20do%20projeto.png)
