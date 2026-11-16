@@ -44,4 +44,4 @@ Desenvolver um reprodutor de músicas simples, semelhante a um MP3 player básic
 
 Os botões usam o resistor interno do Arduino ('INPUT_PULLUP'): um terminal vai ao pino e o outro ao GND, e o botão pressionado lê 'LOW'.
 
-![Montagem do projeto](Montagem%20do%20projeto.png)
+![Montagem do projeto](montagem-do-projeto.png)
