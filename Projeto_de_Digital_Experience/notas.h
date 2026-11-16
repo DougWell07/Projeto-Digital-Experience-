@@ -30,4 +30,4 @@ const int NOTE_CS6 = 1109;
 const int NOTE_DS6 = 1245;
 const int NOTE_F6  = 1397;
 const int NOTE_AS5 = 932;
-const int NOTE_GS5 = 831;
+
