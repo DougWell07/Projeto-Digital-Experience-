@@ -51,7 +51,8 @@ Desenvolver um reprodutor de músicas simples, semelhante a um MP3 player básic
 
 Os botões usam o resistor interno do Arduino (`INPUT_PULLUP`): um terminal vai ao pino e o outro ao GND, e o botão pressionado lê `LOW`.
 
-<!-- TODO: colocar o print do Tinkercad e a foto do projeto finalizado -->
+<img width="300" height="350" alt="IMG_6867" src="https://github.com/user-attachments/assets/1bbb7d7c-8c0a-45d8-944c-12ad562199f8" />
+<img width="300" height="350" alt="Captura de tela 2026-11-18 160801" src="https://github.com/user-attachments/assets/51941b70-a004-4d2c-9284-60df95f88742" />
 
 ### 2.3 Métodos: como o projeto foi desenvolvido
 
@@ -111,8 +112,8 @@ projeto/
 
 Vídeos de demonstração:
 
-- [Vídeo 1: descrever o que mostra](https://github.com/user-attachments/assets/e2cb54dd-2cb5-40ce-953d-b92c3f56576a)
-- [Vídeo 2: descrever o que mostra](https://github.com/user-attachments/assets/b63423f5-017c-4713-bdb5-ecd76530a51b)
+- [Vídeo 1: útlimo teste realizado, com o projeto funcionando](https://github.com/user-attachments/assets/e2cb54dd-2cb5-40ce-953d-b92c3f56576a)
+- [Vídeo 2: Dia da apresentação do projeto na FEI](https://github.com/user-attachments/assets/b63423f5-017c-4713-bdb5-ecd76530a51b)
 
 ### Problemas encontrados e soluções
 
@@ -141,4 +142,14 @@ Vídeos de demonstração:
 
 O projeto atingiu o objetivo de criar um reprodutor de música com Arduino UNO que armazena cinco músicas, lista seus nomes no LCD, toca a música escolhida no buzzer e permite pausar, retomar e parar com indicação por LED's.
 
-O principal desafio foi permitir pause e stop durante a música. A solução foi tocar uma nota por vez em 'millis()', em vez de usar 'delay()', o que manteve os botões sempre respondendo. 
+O principal desafio foi permitir pause e stop durante a música. A solução foi tocar uma nota por vez em 'millis()', em vez de usar 'delay()', o que manteve os botões sempre respondendo. Outro desafio foi o limite de memória, resolvido guardando as músicas na FLASH com 'PROGMEM'.
+
+A criação deste projeto nos permitiu colocar em prática todos os conceitos adquiridos durante este semestre nas aulas de Digital Experience. Entre eles, destacam-se o funcionamento da biblioteca, a utilização do millis() em vez do delay(), o uso de funções e outros princípios fundamentais que propiciaram a realização bem-sucedida do trabalho.
+
+---
+
+### Créditos e referências 
+
+- Melodias (Hedwig's Theme, Star Wars, Pacman, Take on me e Imperial March): Robson Couto, repositório https://github.com/robsoncouto/arduino-songs (2019).
+- A lógica de cálculo de duração das notas (tempo, notas pontuadas e 90% de som por notas) é baseada no código original do mesmo repositório.
+- Site que utilizei para ter detalhes do Buzzer,[Documentação Oficial do Modulino Buzzer](https://docs.arduino.cc/tutorials/modulino-buzzer/how-buzzer/).
