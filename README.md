@@ -45,7 +45,7 @@ Desenvolver um reprodutor de músicas simples, semelhante a um MP3 player básic
 Os botões usam o resistor interno do Arduino ('INPUT_PULLUP'): um terminal vai ao pino e o outro ao GND, e o botão pressionado lê 'LOW'.
 
 <!-- Tem que colocar as fotos do TinkerCad e a do projeto já finalizado -->
-
+https://github.com/user-attachments/assets/e2cb54dd-2cb5-40ce-953d-b92c3f56576a
 
 ### 2.3  Métodos: como o projeto foi desenvolvido 
 
@@ -70,7 +70,7 @@ O desenvolvimento foi feiro em etapas, e cada uma for testada antes da seguinte 
 
 #### Organização dos arquivos 
 
-'''
+```
 projeto/
 ├── projeto.ino    # setup, loop, estados e funções
 ├── notas.h        # tabela nota -> frequência
@@ -79,7 +79,12 @@ projeto/
 ├── musica3.h      # Pacman
 ├── musica4.h      # Take on me
 └── musica5.h      # Marcha Imperial
-'''
+```
 
-
-https://github.com/user-attachments/assets/e2cb54dd-2cb5-40ce-953d-b92c3f56576a
+#### Como o código funciona 
+ - **Detecção do aperto:** o botão só conta quando a leitura atual é 'LOW' e a  do loop anterior era 'HIGH'. Segurar o botão não repete a ação.
+ - **Máquina de estado:** a variável 'estado' (Menu,Tocando,Pausado) define o que cada botão faz. A função 'mudaEstado()' centraliza a troca, atualizando LED's, LCD e som de uma vez.
+ - **Reproduzindo sem travar:** a funçãp 'tocaMusica' roda a cada volta do 'loop()' e compara 'millis()' com o instante que a nota começou. Quando a duração termina, 'iniciaNota()' lê a próxima nota e a toca com 'tone()'.
+ - **Pause e stop:** o pause silencia o buzzer com 'noTone()' e guarda o índice da nota ('notaAtual'). O stop zera o índice e volta ao menu.
+ - **Pausas na música ('REST'):** apenas silencia o buzzer pela duração.
+ - **Notas pontuadas:** duração negativa significa 1,5 vez na duração normal.
