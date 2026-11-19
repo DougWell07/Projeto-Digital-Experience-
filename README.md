@@ -61,7 +61,7 @@ Os botões usam o resistor interno do Arduino (`INPUT_PULLUP`): um terminal vai 
     </td>
     <td align="center" width="50%" valign="center">
       <!-- Segunda foto: Retangular (puxada para cima com valign="top") -->
-    <img src="imagens/Diagrama_Esquematico.png" width="500" height="281" style="object-fit: cover;" alt="Esquema do circuito">
+    <img src="https://github.com/DougWell07/Projeto-Digital-Experience-/blob/main/Imagens/Montagem_pratica.jpeg" width="500" height="281" style="object-fit: cover;" alt="Esquema do circuito">
       <br>
       <sub><b>Figura 2:</b> Diagrama esquemático</sub>
     </td>
