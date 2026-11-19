@@ -126,7 +126,7 @@ projeto/
 
 Vídeos de demonstração:
 
-- [Vídeo 1: útlimo teste realizado, com o projeto funcionando](https://github.com/user-attachments/assets/e2cb54dd-2cb5-40ce-953d-b92c3f56576a)
+- [Vídeo 1: útlimo teste realizado, com o projeto funcionando](https://youtube.com/shorts/v2BPYf7_ErA?feature=share)
 - [Vídeo 2: Dia da apresentação do projeto na FEI](https://github.com/user-attachments/assets/b63423f5-017c-4713-bdb5-ecd76530a51b)
 
 ### Problemas encontrados e soluções
