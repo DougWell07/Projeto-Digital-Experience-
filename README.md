@@ -55,13 +55,13 @@ Os botões usam o resistor interno do Arduino (`INPUT_PULLUP`): um terminal vai 
   <tr>
     <td align="center" width="50%">
       <!-- Primeira foto: Quadrada -->
-      <img src="https://github.com/user-attachments/assets/1bbb7d7c-8c0a-45d8-944c-12ad562199f8" width="400" height="400" style="object-fit: cover;" alt="Montagem física">
+     <img src="imagens/montagem_pratica.jpeg" width="400" height="400" style="object-fit: cover;" alt="Montagem física">
       <br>
       <sub><b>Figura 1:</b> Montagem prática</sub>
     </td>
     <td align="center" width="50%" valign="center">
       <!-- Segunda foto: Retangular (puxada para cima com valign="top") -->
-      <img src="https://github.com/user-attachments/assets/51941b70-a004-4d2c-9284-60df95f88742" width="500" height="281" style="object-fit: cover;" alt="Esquema do circuito">
+    <img src="imagens/Diagrama_Esquematico.png" width="500" height="281" style="object-fit: cover;" alt="Esquema do circuito">
       <br>
       <sub><b>Figura 2:</b> Diagrama esquemático</sub>
     </td>
